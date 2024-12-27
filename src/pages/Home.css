@@ -1,0 +1,43 @@
+/* สไตล์พื้นหลังหลัก */
+.home-container {
+    background-color: #0f3153; /* สีพื้นหลัง */
+    border-radius: 15px; /* มุมมน */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
+}
+
+/* พื้นที่สำหรับภาพเลื่อน */
+.image-slider-container {
+    overflow: hidden; /* ซ่อนภาพที่เกิน */
+    position: relative;
+    height: 1025px; /* กำหนดความสูงของพื้นที่แสดงภาพ */
+    background-color: #e9ecef; /* สีพื้นหลังของพื้นที่รูป */
+    border: 2px solid #007bff; /* กรอบรอบพื้นที่รูป */
+    border-radius: 10px; /* มุมมน */
+}
+
+/* การเลื่อนของภาพ */
+.image-slider {
+    display: flex;
+    animation: slide 10s linear infinite; /* เริ่มแอนิเมชันเลื่อน */
+}
+
+.slider-image {
+    flex-shrink: 0; /* ไม่ให้รูปย่อขนาด */
+    width: auto; /* ความกว้างอัตโนมัติ */
+    height: 100%; /* ความสูงเท่ากับ container */
+    margin-right: 10px; /* ระยะห่างระหว่างรูป */
+    border-radius: 5px; /* มุมมนเล็กน้อย */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาใต้รูป */
+}
+
+/* การกำหนดแอนิเมชัน */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
